@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client form</title>
+    <link rel="stylesheet" href="./assests/css/client_style.css" />
+  </head>
+
+  <body>
+    <section class="info-form">
+      <div class="container">
+        <div class="box">
+          <h1 class="primary-clr transform1 font1 align">client intake form</h1>
+          <p class="para">
+            Please answer the questions below, so Chad can learn more about you
+            and your unique situation. After you submit the answers, Chad will
+            begin creating your meal planner and sample meals for you. On the
+            next page, you can schedule a time to go over everything with Chad
+            to get you off to an amazing start, with all the guidance, support,
+            and accountability you need!
+          </p>
+          <form id="forms">
+            <div class="form-container">
+              <div class="form-block">
+                <label class="form-label">First and Last name</label><br />
+                <input type="text" class="form-input" placeholder="John deo" />
+              </div>
+
+              <div class="form-block">
+                <label class="form-label">Email address</label><br />
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="Johndeo@doamin.com"
+                />
+              </div>
+
+              <div class="form-block">
+                <label class="form-label"
+                  >Please select your favorite foods from each of the 5 main
+                  categories below.</label
+                >
+              </div>
+
+              <label class="form-label" onchange="selectall1()"
+                ><input type="checkbox" id="selectall" />Select all</label
+              >
+
+              <div class="form-box">
+                <div class="align">
+                  <label class="primary-clr">Starchy Carbs</label><br />
+                </div>
+
+                <div class="inside-selection">
+                  <label class="form-label" onchange="inside1()"
+                    ><input
+                      type="checkbox"
+                      value=""
+                      id="select-all-inside1"
+                    />Select all</label
+                  >
+                </div>
+
+                <div class="option-container">
+                  <div class="option-box">
+                    <label>
+                      <input
+                        name="checkform"
+                        value="Beans"
+                        type="checkbox"
+                        class="check checkinside1"
+                      />Beans</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        name="checkform"
+                        value="Black-Eyed Peas"
+                        type="checkbox"
+                        class="check checkinside1"
+                      />
+                      Black-Eyed Peas</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Brown Rice"
+                        class="check checkinside1"
+                      />
+                      Brown Rice</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value=" Couscous"
+                        class="check checkinside1"
+                      />
+                      Couscous</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Lentils Oat"
+                        class="check checkinside1"
+                      />
+                      Lentils Oat</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Oat Bran"
+                        class="check checkinside1"
+                      />
+                      Oat Bran</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Oatmeal"
+                        class="check checkinside1"
+                      />
+                      Oatmeal</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Porridge"
+                        class="check checkinside1"
+                      />
+                      Porridge</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Potato"
+                        class="check checkinside1"
+                      />
+                      Potato</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Pumpkin"
+                        class="check checkinside1"
+                      />
+                      Pumpkin</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Quinoa"
+                        class="check checkinside1"
+                      />
+                      Quinoa</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Squash"
+                        class="check checkinside1"
+                      />
+                      Squash</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Sweet Potato"
+                        class="check checkinside1"
+                      />Sweet Potato</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Yam"
+                        class="check checkinside1"
+                      />Yam</label
+                    >
+                  </div>
+                  <br />
+
+                  <div class="other">
+                    <label>Other Starchy Carbs I Like:</label>
+                    <input type="text" id="other-text" onblur="addinarray()" />
+                    <div id="added">Carbs Added</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-box2">
+                <div class="align">
+                  <label class="primary-clr">Simple Carbs</label><br />
+                </div>
+
+                <div class="inside-selection">
+                  <label class="form-label" onchange="inside2()"
+                    ><input
+                      type="checkbox"
+                      value=""
+                      id="select-all-inside2"
+                    />Select all</label
+                  >
+                </div>
+
+                <div class="option-container">
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Apple"
+                        class="check checkinside2"
+                      />Apple</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Apricot"
+                        class="check checkinside2"
+                      />
+                      Apricot</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="banana"
+                        class="check checkinside2"
+                      />
+                      banana
+                    </label>
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Blackberries"
+                        class="check checkinside2"
+                      />
+                      Blackberries</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Blueberries"
+                        class="check checkinside2"
+                      />Blueberries</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Cantaloupe"
+                        class="check checkinside2"
+                      />Cantaloupe</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Cranberries"
+                        class="check checkinside2"
+                      />Cranberries</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Figs"
+                        class="check checkinside2"
+                      />Figs</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Grapefruit"
+                        class="check checkinside2"
+                      />Grapefruit</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Grapes"
+                        class="check checkinside2"
+                      />Grapes</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Guava"
+                        class="check checkinside2"
+                      />Guava</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Honeydew Melon"
+                        class="check checkinside2"
+                      />Honeydew Melon</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Kiwi"
+                        class="check checkinside2"
+                      />Kiwi</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Lemon"
+                        class="check checkinside2"
+                      />Lemon</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Lime"
+                        class="check checkinside2"
+                      />Lime</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Mango"
+                        class="check checkinside2"
+                      />Mango</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Nectarine"
+                        class="check checkinside2"
+                      />Nectarine</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Orange"
+                        class="check checkinside2"
+                      />Orange</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Papaya"
+                        class="check checkinside2"
+                      />Papaya</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Pear"
+                        class="check checkinside2"
+                      />Pear</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Pineapple"
+                        class="check checkinside2"
+                      />Pineapple</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Plum"
+                        class="check checkinside2"
+                      />Plum</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Pomegranate"
+                        class="check checkinside2"
+                      />Pomegranate</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Prunes"
+                        class="check checkinside2"
+                      />Prunes</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Raisin"
+                        class="check checkinside2"
+                      />Raisin</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Raspberries"
+                        class="check checkinside2"
+                      />Raspberries</label
+                    >
+                  </div>
+
+                  <div class="option-box">
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Strawberries"
+                        class="check checkinside2"
+                      />Strawberries</label
+                    >
+                  </div>
+
+                  <div class="other">
+                    <label>Other Starchy Carbs I Like:</label>
+                    <input
+                      type="text"
+                      id="other-text2"
+                      onblur="addinarray2()"
+                    />
+                    <div id="added2">Carbs Added</div>
+                  </div>
+                </div>
+              </div>
+              <div class="submit-area">
+                <button type="submit" class="submit-btn" onclick="submitfun()">
+                  Submit
+                </button>
+              </div>
+            </div>
+
+            <div id="exit-intent-popup">
+              <div class="popup">
+                <b>Fill the Information!!</b>
+                <p>Where are you going</p>
+                <!-- <input type="email" placeholder="Your email address" class="email" />
+                            <button class="submit">Receive Newsletter</button> -->
+                <span class="close">x</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      function selectall1() {
+        let x = document.getElementById("selectall");
+        console.log(x);
+        if (x.checked) {
+          // if checked
+          console.log("checked");
+          let input = document.querySelectorAll(".check");
+          // let  name=document.forms.forms.elements.checkform;
+          // console.log(name);
+          for (let i = 0; i < input.length; i++) {
+            input[i].checked = true;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".check:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.push(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        } else {
+          // if unchecked
+          console.log("unchecked");
+          let input = document.querySelectorAll(".check");
+          for (let i = 0; i < input.length; i++) {
+            input[i].checked = false;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".check:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.pop(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        }
+      }
+
+      function inside1() {
+        let tick = document.getElementById("select-all-inside1");
+        console.log(tick);
+        if (tick.checked) {
+          console.log("checked");
+          let put = document.querySelectorAll(".checkinside1");
+          for (let i = 0; i < put.length; i++) {
+            put[i].checked = true;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".check:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.push(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        } else {
+          console.log("unchecked");
+          let put = document.querySelectorAll(".checkinside1");
+          for (let i = 0; i < put.length; i++) {
+            put[i].checked = false;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".checkinside1:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.pop(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        }
+      }
+
+      function inside2() {
+        let tick = document.getElementById("select-all-inside2");
+        console.log(tick);
+        if (tick.checked) {
+          console.log("checked");
+          let put = document.querySelectorAll(".checkinside2");
+          for (let i = 0; i < put.length; i++) {
+            put[i].checked = true;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".checkinside2:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.push(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        } else {
+          console.log("unchecked");
+          let put = document.querySelectorAll(".checkinside2");
+          for (let i = 0; i < put.length; i++) {
+            put[i].checked = false;
+            let arr = [];
+            let checkboxes = document.querySelectorAll(".checkinside2:checked");
+            for (let i = 0; i < checkboxes.length; i++) {
+              arr.pop(checkboxes[i].value);
+            }
+            console.log(arr);
+          }
+        }
+      }
+
+      let arr = [];
+      function addinarray() {
+        let x = document.getElementById("other-text").value;
+        // console.log(x);
+        arr.push(x);
+        document.getElementById("other-text").value = "";
+        document.getElementById("added").style.visibility = "visible";
+        // console.log(arr);
+      }
+
+      function addinarray2() {
+        let x = document.getElementById("other-text2").value;
+        console.log(x);
+        arr.push(x);
+        document.getElementById("other-text2").value = "";
+        document.getElementById("added2").style.visibility = "visible";
+        // console.log(arr);
+      }
+
+      let submitarr = [];
+      function submitfun() {
+        let checkboxes = document.querySelectorAll(
+          "input[type='checkbox']:checked"
+        );
+        // console.log(checkboxes);
+
+        for (let i = 0; i < checkboxes.length; i++) {
+          submitarr.push(checkboxes[i].value);
+        }
+        submitarr = submitarr.concat(arr);
+        console.log(submitarr);
+        window.location.href = "http://www.google.com";
+      }
+
+      document.addEventListener("mouseleave", (e) => {
+        // console.log(e);
+        if (e.clientY <= -1) {
+          document.getElementById("exit-intent-popup").style.transform =
+            "translateY(0) scale(1)";
+        }
+      });
+
+      document
+        .getElementById("exit-intent-popup")
+        .addEventListener("click", (exit) => {
+          if (exit.target.className == "close") {
+            document.getElementById("exit-intent-popup").style.transform =
+              "translateY(60%) scale(0)";
+          }
+        });
+      document.addEventListener("scroll", (e) => {
+        window.scrollBy;
+        console.log(
+          "scrollX: " + window.scrollX + ", scrollY: " + window.scrollY
+        );
+        // let x=("scrollX: " + window.scrollX + ", scrollY: " + window.scrollY);
+        // document.getElementById('screen').innerHTML=x;
+      });
+    </script>
+  
+  
+  </body>
+</html>
